@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navegadores</title>
+        <meta name="description" content="Site sobre navegadores de internet.">
+        <meta name="keywords" content="navegadores, browsers">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header-title">Blog dos Navegadores</h1>
+        </header>
+
+        <script>
+            function detectUserBrowser() {
+                if ((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1) {
+                    alert('Seu navegador é o Opera');
+                } else if (navigator.userAgent.indexOf("Edg") != -1) {
+                    alert('Seu navegador é o Edge');
+                    window.location.href = "microsoft-edge.html";
+                } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+                    alert('Seu navegador é o Chrome');
+                    window.location.href = "chrome.html";
+                } else if (navigator.userAgent.indexOf("Safari") != -1) {
+                    alert('Seu navegador é o Safari');
+                } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+                    alert('Seu navegador é o Firefox');
+                    window.location.href = "mozilla-firefox.html";
+                } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode == true)) //IF IE > 10
+                {
+                    alert('Seu navegador é o IE');
+                } else {
+                    alert('Seu navegador é o deconhecido');
+                }
+            }
+        </script>
+
+        <div class="card-container">
+            <div class="card">
+                <h1>Chrome</h1>
+                <p class="texto">Google Chrome is a web browser developed by...</p>
+                <a href="chrome.html">Saber mais</a>
+            </div>
+
+            <div class="card">
+                <h1>Mozilla Firefox</h1>
+                <p class="texto">Mozilla Firefox is an open-source web browser developed by...</p>
+                <a href="mozilla-firefox.html">Saber mais</a>
+            </div>
+
+            <div class="card">
+                <h1>Microsoft Edge</h1>
+                <p class="texto">Microsoft Edge is a web browser developed by Microsoft...</p>
+                <a href="microsoft-edge.html">Saber mais</a>
+            </div>
+
+            <div class="card-detector" onclick="detectUserBrowser()">
+                <p>Detectar meu navegador!</p>
+            </div>
+        </div>
+    </body>
+</html>
