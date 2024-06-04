@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px;
+}
+
